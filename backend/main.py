@@ -18,9 +18,11 @@ def create_app(config):
 
     # Allow frontend dev server to send/receive cookies
     CORS(
-        app,
-        resources={r"/*": {"origins": ["http://localhost:3000", "http://127.0.0.1:3000", "https://website-test-lemon.vercel.app"]}},
-        supports_credentials=True,
+    app,
+    resources={r"/*": {"origins": ["http://localhost:3000",
+                                   "http://127.0.0.1:3000",
+                                   "https://website-test-lemon.vercel.app"]}},
+    supports_credentials=True,
     )
 
     db.init_app(app)
