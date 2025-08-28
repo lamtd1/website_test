@@ -13,14 +13,14 @@ const LoggedinHome = () => {
     const [recipeId, setRecipeID] = useState(0)
 
         useEffect(() => {
-                fetch('/recipe/recipes')
+                fetch(`${process.env.REACT_APP_API_URL}/recipe/recipes`)
                     .then(res => res.json())
                     .then(data => setRecipes(data))
                     .catch(err => console.log(err))
         }, [])
 
     const getAllRecipes = () => {
-        fetch('/recipe/recipes')
+        fetch(`${process.env.REACT_APP_API_URL}/recipe/recipes`)
         .then(res => res.json())
         .then(data => {
             setRecipes(data)
@@ -59,7 +59,7 @@ const LoggedinHome = () => {
             body: JSON.stringify(data)
         }
 
-        authFetch(`/recipe/recipe/${recipeId}`, requestsOptions)
+        authFetch(`${process.env.REACT_APP_API_URL}/recipe/recipe/${recipeId}`, requestsOptions)
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -81,7 +81,7 @@ const LoggedinHome = () => {
                 'content-type': 'application/json'
             }
         }
-        authFetch(`/recipe/recipe/${id}`, requestsOptions)
+        authFetch(`${process.env.REACT_APP_API_URL}/recipe/recipe/${id}`, requestsOptions)
         .then(res => res.json())
         .then(data => {
             console.log(data)

@@ -10,7 +10,7 @@ export function AuthProvider({ children }) {
     const isLoggedIn = !!accessToken
 
     const login = useCallback(async (username, password) => {
-        const res = await fetch('/auth/login', {
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/auth/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             credentials: 'include', // receive refresh cookie
@@ -24,7 +24,7 @@ export function AuthProvider({ children }) {
     }, [])
 
     const refresh = useCallback(async () => {
-        const res = await fetch('/auth/refresh', {
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/auth/refresh`, {
             method: 'POST',
             credentials: 'include', // send refresh cookie
         })
@@ -36,7 +36,7 @@ export function AuthProvider({ children }) {
 
     const logout = useCallback(async () => {
         try {
-            await fetch('/auth/logout', { method: 'POST', credentials: 'include' })
+            await fetch(`${process.env.REACT_APP_API_URL}/auth/logout`, { method: 'POST', credentials: 'include' })
         } finally {
             setAccessToken(null)
         }

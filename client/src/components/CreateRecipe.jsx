@@ -20,7 +20,7 @@ const CreateRecipePage = () => {
             body: JSON.stringify(data)
         }
 
-    authFetch('recipe/recipes', requestsOptions)
+    authFetch(`${process.env.REACT_APP_API_URL}/recipe/recipes`, requestsOptions)
         .then(res => res.json())
         .then(data => {
             reset()

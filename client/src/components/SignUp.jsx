@@ -30,7 +30,7 @@ const SignUpPage = () => {
                 body: JSON.stringify(body)
             }
 
-                fetch('/auth/signup', requestsOptions)
+                fetch(`${process.env.REACT_APP_API_URL}/auth/signup`, requestsOptions)
                 .then(res => res.json())
                 .then(data => {
                     setServerResponse(data.message)
