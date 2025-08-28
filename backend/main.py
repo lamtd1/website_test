@@ -20,7 +20,8 @@ def create_app(config):
     CORS(
         app,
         resources={r"/*": {"origins": [
-            "https://website-test-e3xx1w75j-lamtads-projects.vercel.app",
+            "website-test-i6zrtqeuf-lamtads-projects.vercel.app",
+            "https://website-test-lemon.vercel.app",
             "http://localhost:3000"
         ]}},
         supports_credentials=True,  # cho phép gửi cookie
