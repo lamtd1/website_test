@@ -2,6 +2,18 @@ from flask_restx import Namespace, Resource, fields
 from flask import request
 from models import Recipe
 from flask_jwt_extended import jwt_required
+from exts import db
+
+
+
+from flask import abort
+
+def get_or_404(model, id):
+    obj = db.session.get(model, id)
+    if obj is None:
+        abort(404, description=f"{model.__name__} with id {id} not found")
+    return obj
+
 
 recipe_ns = Namespace("recipe", description="A namespace for recipe")
 
@@ -27,7 +39,7 @@ class RecipesResouce(Resource):
     @recipe_ns.marshal_list_with(recipe_model)
     def get(self):
         """Get all recipes"""
-        recipes = Recipe.query.all()
+        recipes = db.session.query(Recipe).all()
         return recipes
     
     @recipe_ns.marshal_with(recipe_model)
@@ -49,14 +61,14 @@ class RecipeResource(Resource):
     @recipe_ns.marshal_with(recipe_model)
     def get(self, id):
         """Get a recipe by id"""
-        recipe = Recipe.query.get_or_404(id)
+        recipe = get_or_404(Recipe, id)
         return recipe
     
     @recipe_ns.marshal_with(recipe_model)
     @jwt_required()
     def put(self, id):
         """Update a recipe by id"""
-        recipe_to_update = Recipe.query.get_or_404(id)
+        recipe_to_update = get_or_404(Recipe, id)
 
         data = request.get_json()
 
@@ -68,7 +80,7 @@ class RecipeResource(Resource):
     @jwt_required()
     def delete(self, id):
         """Delete a recipe"""
-        recipe_to_delete = Recipe.query.get_or_404(id)
+        recipe_to_delete = get_or_404(Recipe, id)
 
         recipe_to_delete.delete()
 
