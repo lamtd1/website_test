@@ -1,42 +1,42 @@
 alembic==1.16.4
 aniso8601==10.0.1
 attrs==25.3.0
-blinker @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_11lor_igbs/croot/blinker_1737449046432/work
-cffi @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_e4xd9yd9i2/croot/cffi_1736182819442/work
-click @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_2bwamfk1ra/croot/click_1754477943404/work
-cryptography @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_b0jst6be2v/croot/cryptography_1753084599326/work
-dnspython @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/dnspython_1728597146677/work
-email_validator @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/email-validator-meta_1728604617499/work
-Flask @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_fabivvom5o/croot/flask_1737454311468/work
-flask-cors @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_7drb0zkge2/croot/flask-cors_1752860305793/work
-Flask-JWT-Extended @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_55x_4u08_d/croot/flask-jwt-extended_1749578676278/work
-Flask-Login @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/flask-login_1728605322080/work
+blinker
+cffi
+click
+cryptography
+dnspython
+email-validator
+Flask
+flask-cors
+Flask-JWT-Extended
+Flask-Login
 Flask-Migrate==4.1.0
 Flask-MySQL==1.6.0
 flask-restx==1.3.0
-Flask-SQLAlchemy @ file:///Users/builder/cbouss/buildout/croot/flask-sqlalchemy_1735853641189/work
-Flask-WTF @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/flask-wtf_1728605473842/work
-greenlet @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_3fdrsxa1og/croot/greenlet_1733860082149/work
-idna @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/idna_1728585920859/work
+Flask-SQLAlchemy
+Flask-WTF
+greenlet
+idna
 importlib_resources==6.5.2
-itsdangerous @ file:///Users/builder/cbouss/buildout/croot/itsdangerous_1732923588034/work
-Jinja2 @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_2cnn4kenrm/croot/jinja2_1741710859444/work
+itsdangerous
+Jinja2
 jsonschema==4.25.1
 jsonschema-specifications==2025.4.1
 Mako==1.3.10
-MarkupSafe @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_1f_uj4vxik/croot/markupsafe_1738584045311/work
+MarkupSafe
 psycopg2==2.9.10
-pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
-PyJWT @ file:///Users/builder/cbouss/buildout/croot/pyjwt_1739484683708/work
-PyMySQL @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_9f6v9ucvcy/croot/pymysql_1746768514026/work
+pycparser
+PyJWT
+PyMySQL
 python-decouple==3.8
-python-dotenv @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_0bqseadoho/croot/python-dotenv_1745610246418/work
+python-dotenv
 pytz==2025.2
 referencing==0.36.2
 rpds-py==0.27.0
 setuptools==78.1.1
-SQLAlchemy @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_c6p_335xi8/croot/sqlalchemy_1752527067861/work
-typing_extensions @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_0b3jpv_f79/croot/typing_extensions_1734714864260/work
-Werkzeug @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_87am5fxnsf/croot/werkzeug_1737448721856/work
+SQLAlchemy
+typing_extensions
+Werkzeug
 wheel==0.45.1
-WTForms @ file:///Users/ktietz/demo/mc3/conda-bld/wtforms_1629354749392/work
+WTForms
